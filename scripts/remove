@@ -3,4 +3,4 @@
 source /usr/share/yunohost/helpers
 
 ynh_script_progression "Retrait de la configuration du portail ARCenal..."
-ynh_remove_nginx_config
+ynh_config_remove_nginx

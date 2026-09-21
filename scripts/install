@@ -9,4 +9,4 @@ install -m 0644 ../www/logo-arcenal.svg "$install_dir/logo-arcenal.svg"
 chmod -R a+rX "$install_dir"
 
 ynh_script_progression "Configuration de l'accès au portail..."
-ynh_add_nginx_config
+ynh_config_add_nginx
