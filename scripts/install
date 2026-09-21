@@ -1,0 +1,12 @@
+#!/bin/bash
+
+source /usr/share/yunohost/helpers
+
+ynh_script_progression "Installation du portail ARCenal..."
+install -m 0644 ../www/index.html "$install_dir/index.html"
+install -m 0644 ../www/arcenal.css "$install_dir/arcenal.css"
+install -m 0644 ../www/logo-arcenal.svg "$install_dir/logo-arcenal.svg"
+chmod -R a+rX "$install_dir"
+
+ynh_script_progression "Configuration de l'accès au portail..."
+ynh_add_nginx_config

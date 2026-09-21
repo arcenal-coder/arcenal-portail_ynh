@@ -1,0 +1,7 @@
+#!/bin/bash
+
+source /usr/share/yunohost/helpers
+
+ynh_restore "$install_dir"
+ynh_restore "/etc/nginx/conf.d/$domain.d/$app.conf"
+ynh_systemctl --service=nginx --action=reload
