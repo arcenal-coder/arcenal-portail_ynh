@@ -3,27 +3,76 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Espace d'accueil ARCenal">
-    <title>ARCenal Portail</title>
+    <meta name="description" content="Portail ARCenal OS : l'accès maîtrisé à vos services numériques.">
+    <meta name="theme-color" content="#202229">
+    <title>ARCenal OS — Portail</title>
     <link rel="stylesheet" href="arcenal.css">
   </head>
   <body>
-    <main class="page">
-      <header class="entete">
-        <img class="logo" src="logo-arcenal.svg" alt="ARCenal">
-        <span class="badge">PORTAIL</span>
-      </header>
-      <section class="hero" aria-labelledby="titre">
-        <p class="sur-titre">Votre espace numérique maîtrisé</p>
-        <h1 id="titre">Bienvenue dans votre environnement ARCenal.</h1>
-        <p class="introduction">Accédez à vos services sélectionnés et à l'administration technique de votre environnement.</p>
-        <a class="action-principale" href="/yunohost/admin/">Ouvrir l'administration</a>
-      </section>
-      <section class="repere" aria-label="Fonctionnement ARCenal">
-        <article><span class="numero">01</span><h2>Services sélectionnés</h2><p>Le catalogue présente les outils validés par ARCenal.</p></article>
-        <article><span class="numero">02</span><h2>Mises à jour maîtrisées</h2><p>Les évolutions sont préparées puis publiées par canal.</p></article>
-        <article><span class="numero">03</span><h2>Socle préservé</h2><p>YunoHost reste à jour sans fork de son administration.</p></article>
-      </section>
-    </main>
+    <div class="shell">
+      <aside class="rail" aria-label="Navigation ARCenal">
+        <a class="marque" href="#accueil" aria-label="Accueil ARCenal OS">
+          <img src="logo-arcenal.svg" alt="ARCenal">
+          <span><strong>ARCenal</strong><small>OS</small></span>
+        </a>
+        <nav class="navigation" aria-label="Sections du portail">
+          <a class="navigation__lien navigation__lien--actif" href="#accueil"><span class="icone" aria-hidden="true">⌂</span> Accueil</a>
+          <a class="navigation__lien" href="#services"><span class="icone" aria-hidden="true">◫</span> Services</a>
+          <a class="navigation__lien" href="#engagements"><span class="icone" aria-hidden="true">◇</span> Engagements</a>
+        </nav>
+        <div class="rail__bas">
+          <span class="statut"><i aria-hidden="true"></i> Environnement protégé</span>
+          <a class="rail__admin" href="/yunohost/admin/">Administration technique <span aria-hidden="true">↗</span></a>
+        </div>
+      </aside>
+      <main class="contenu" id="accueil">
+        <header class="barre">
+          <p class="fil-ariane"><span aria-hidden="true">●</span> Espace numérique ARCenal</p>
+          <a class="bouton bouton--discret" href="/yunohost/admin/">Espace administrateur <span aria-hidden="true">→</span></a>
+        </header>
+        <section class="introduction" aria-labelledby="titre-principal">
+          <div class="introduction__copie">
+            <p class="eyebrow">Votre environnement, en confiance</p>
+            <h1 id="titre-principal">Un système numérique<br><em>à votre mesure.</em></h1>
+            <p class="chapeau">ARCenal rassemble vos services essentiels dans un environnement sélectionné, suivi et prêt à évoluer avec votre activité.</p>
+            <div class="introduction__actions">
+              <a class="bouton bouton--principal" href="#services">Découvrir les services <span aria-hidden="true">↓</span></a>
+              <a class="lien-texte" href="/yunohost/admin/">Administrer l’environnement <span aria-hidden="true">↗</span></a>
+            </div>
+          </div>
+          <aside class="carte-socle" aria-label="État du socle ARCenal">
+            <div class="carte-socle__entete"><span class="point point--vert" aria-hidden="true"></span> SOCLE ARCENAL</div>
+            <p>Votre socle de confiance est opérationnel.</p>
+            <dl>
+              <div><dt>Catalogue</dt><dd>Contrôlé</dd></div>
+              <div><dt>Canal</dt><dd>Stable</dd></div>
+              <div><dt>Administration</dt><dd>YunoHost</dd></div>
+            </dl>
+            <div class="fil-laiton" aria-hidden="true"></div>
+          </aside>
+        </section>
+        <section class="section" id="services" aria-labelledby="titre-services">
+          <div class="titre-section">
+            <p class="eyebrow">Vos outils sélectionnés</p>
+            <h2 id="titre-services">Les services de votre environnement</h2>
+            <p>Ajoutez et pilotez les applications autorisées depuis l’administration ARCenal.</p>
+          </div>
+          <div class="services">
+            <a class="service service--drive" href="/yunohost/admin/#/apps"><span class="service__pictogramme" aria-hidden="true">↗</span><span class="service__corps"><small>STOCKAGE &amp; PARTAGE</small><strong>Services de collaboration</strong><em>Accéder aux applications installées</em></span><span class="service__fleche" aria-hidden="true">→</span></a>
+            <a class="service service--gestion" href="/yunohost/admin/#/apps/catalog"><span class="service__pictogramme" aria-hidden="true">+</span><span class="service__corps"><small>CATALOGUE ARCENAL</small><strong>Ajouter un service</strong><em>Applications sélectionnées par ARCenal</em></span><span class="service__fleche" aria-hidden="true">→</span></a>
+            <a class="service service--admin" href="/yunohost/admin/"><span class="service__pictogramme" aria-hidden="true">⌘</span><span class="service__corps"><small>EXPLOITATION</small><strong>Administration technique</strong><em>Utilisateurs, sauvegardes et maintenance</em></span><span class="service__fleche" aria-hidden="true">→</span></a>
+          </div>
+        </section>
+        <section class="engagements section" id="engagements" aria-labelledby="titre-engagements">
+          <div class="titre-section"><p class="eyebrow">Méthode ARCenal</p><h2 id="titre-engagements">Une base stable pour avancer sereinement</h2></div>
+          <ol class="principes">
+            <li><span>01</span><div><h3>Choisir</h3><p>Chaque application proposée a été explicitement validée pour votre environnement.</p></div></li>
+            <li><span>02</span><div><h3>Préserver</h3><p>Le socle YunoHost reste standard afin de conserver sa fiabilité et ses mises à jour.</p></div></li>
+            <li><span>03</span><div><h3>Évoluer</h3><p>Les nouvelles versions sont publiées par canal, avec une trajectoire claire.</p></div></li>
+          </ol>
+        </section>
+        <footer class="pied"><p>Un environnement numérique conçu pour durer.</p><p class="signature"><img src="logo-arcenal.svg" alt="ARCenal"> Propulsé par ARCenal OS</p></footer>
+      </main>
+    </div>
   </body>
 </html>
