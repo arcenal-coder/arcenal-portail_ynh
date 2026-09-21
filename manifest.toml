@@ -4,7 +4,7 @@ id = "arcenal-portail"
 name = "ARCenal Portail"
 description.fr = "Portail d'accueil ARCenal pour vos services sélectionnés."
 description.en = "ARCenal welcome portal for your selected services."
-version = "0.1.0~ynh1"
+version = "0.1.1~ynh1"
 maintainers = ["ARCenal"]
 
 [upstream]
@@ -35,6 +35,8 @@ ram.runtime = "10M"
     default = "visitors"
 
 [resources]
+    [resources.system_user]
+
     [resources.install_dir]
 
     [resources.permissions]
